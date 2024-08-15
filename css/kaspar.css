@@ -142,7 +142,7 @@ ul {
 
 .header .search i {
     color: white;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .header .nav ul {
@@ -176,7 +176,8 @@ ul {
     .header .nav {
         order: 2;
         display: flex;
-        justify-content: space-around;
+        color: white;
+        margin-top: 10px;
     }
 
     .header .nav ul {
