@@ -99,7 +99,7 @@ let stats = document.querySelector(".stats");
 let statsNum = document.querySelectorAll(".stats .number");
 let start =0;
 window.onscroll = function () {
-if ((window.innerWidth >= 1200 &&window.scrollY >= skills.offsetTop  - 350) || (window.innerWidth < 1200 && window.scrollY >= skills.offsetTop - 100)) {
+if ((window.innerWidth >= 1200 &&window.scrollY >= stats.offsetTop  - 350) || (window.innerWidth < 1200 && window.scrollY >= stats.offsetTop - 100)) {
         if (!start){
         statsNum.forEach((num) => startcon(num))
         }
