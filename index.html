@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kaspar | template two</title>
+    <link rel="icon" href="images/logo3.png" >
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/normalize1.css">
     <link rel="stylesheet" href="css/kaspar.css">
@@ -39,6 +40,12 @@
         </div>
     </div>
     <div class="home" id="home">
+        <div class="img">
+            <img src="images/subscribe.jpg" alt="">
+            <img  src="images/landing-2.jpg" alt="">
+            <img src="images/quote.jpg" alt="">
+            <!-- class="active" -->
+        </div>
         <div class="overlay"></div>
         <div class="container">
             <div class="info">
@@ -133,7 +140,7 @@
                     tincidunt.</p>
             </div>
             <ul class="shuffle">
-                <li>all</li>
+                <li class="active">all</li>
                 <li>App</li>
                 <li>Photo</li>
                 <li>Web</li>
@@ -141,60 +148,118 @@
             </ul>
         </div>
         <div class="imgs-con">
-            <div class="box">
+            <div class="box App">
                 <img src="images/shuffle-01.jpg" alt="">
                 <div class="caption">
                     <h4>Awesome Image</h4>
                     <p>Photography</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box App">
                 <img src="images/shuffle-02.jpg" alt="">
                 <div class="caption">
                     <h4>Awesome Image</h4>
                     <p>Photography</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Photo">
                 <img src="images/shuffle-03.jpg" alt="">
                 <div class="caption">
                     <h4>Awesome Image</h4>
                     <p>Photography</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Photo">
                 <img src="images/shuffle-04.jpg" alt="">
                 <div class="caption">
                     <h4>Awesome Image</h4>
                     <p>Photography</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Web">
                 <img src="images/shuffle-05.jpg" alt="">
                 <div class="caption">
                     <h4>Awesome Image</h4>
                     <p>Photography</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box  Web">
                 <img src="images/shuffle-06.jpg" alt="">
                 <div class="caption">
                     <h4>Awesome Image</h4>
                     <p>Photography</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Print">
                 <img src="images/shuffle-07.jpg" alt="">
                 <div class="caption">
                     <h4>Awesome Image</h4>
                     <p>Photography</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box Print">
                 <img src="images/shuffle-08.jpg" alt="">
                 <div class="caption">
                     <h4>Awesome Image</h4>
                     <p>Photography</p>
+                </div>
+            </div>
+            <div class="imgs-con none">
+                <div class="box Photo">
+                    <img src="images/shuffle-01.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box  Photo">
+                    <img src="images/shuffle-02.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box  App">
+                    <img src="images/shuffle-03.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box  App">
+                    <img src="images/shuffle-04.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box Print">
+                    <img src="images/shuffle-05.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box Print">
+                    <img src="images/shuffle-06.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box Web">
+                    <img src="images/shuffle-07.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box Web">
+                    <img src="images/shuffle-08.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,22 +290,22 @@
         <div class="container">
             <div class="box">
                 <i class="fas fa-mug-hot"></i>
-                <div class="number">1.236</div>
+                <div class="number" data-goal="236">0</div>
                 <p>Coffee Drinks</p>
             </div>
             <div class="box">
                 <i class="far fa-folder"></i>
-                <div class="number">256</div>
+                <div class="number" data-goal="256">0</div>
                 <p>Completed Projects</p>
             </div>
             <div class="box">
                 <i class="far fa-envelope"></i>
-                <div class="number">1,743</div>
+                <div class="number" data-goal="174">0</div>
                 <p>Mail Sent</p>
             </div>
             <div class="box">
                 <i class="fas fa-trophy"></i>
-                <div class="number">17</div>
+                <div class="number" data-goal="17">0</div>
                 <p>Awards Received</p>
             </div>
         </div>
@@ -256,21 +321,50 @@
                     <div class="text">
                         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit,
                         eget tincidunt.
-                        <p>John Doe, CEO</p>
+                        <p>John jom, CEO</p>
                     </div>
                 </div>
-                <div class="box">
+                                <div class="box">
                     <img src="images/skills-02.jpg" alt="">
+                    <div class="text">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit,
+                        eget tincidunt.
+                        <p>le Doe, CEO</p>
+                    </div>
+                </div>                <div class="box none">
+                    <img src="images/skills3.jpg" alt="">
+                    <div class="text">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit,
+                        eget tincidunt.
+                        <p>bin tem, CEO</p>
+                    </div>
+                </div>                <div class="box none">
+                    <img src="images/skills4.jpg" alt="">
+                    <div class="text">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit,
+                        eget tincidunt.
+                        <p>John Doe, CEO</p>
+                    </div>
+                </div>                <div class="box none">
+                    <img src="images/skills5.jpg" alt="">
+                    <div class="text">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit,
+                        eget tincidunt.
+                        <p>hon le, CEO</p>
+                    </div>
+                </div>
+                <div class="box none">
+                    <img src="images/skills6.jpg" alt="">
                     <div class="text">
                         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet
                         elit,
                         eget tincidunt.
-                        <p>John Doe, CEO</p>
+                        <p>nada mea, CEO</p>
                     </div>
                 </div>
                 <ul class="bullets">
-                    <li><i class="fa-regular fa-circle"></i></li>
                     <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-regular fa-circle"></i></li>
                     <li><i class="fa-regular fa-circle"></i></li>
                 </ul>
             </div>
@@ -283,25 +377,25 @@
                 <div class="box">
                     <h4>Html &amp; Css</h4>
                     <div class="prog">
-                        <span style="width: 90%" data-progress="90%"></span>
+                        <span style="width: 0%" data-progress="90%"></span>
                     </div>
                 </div>
                 <div class="box">
                     <h4>Adobe</h4>
                     <div class="prog">
-                        <span style="width: 70%" data-progress="70%"></span>
+                        <span style="width: 0%" data-progress="70%"></span>
                     </div>
                 </div>
                 <div class="box">
                     <h4>JavaScript</h4>
                     <div class="prog">
-                        <span style="width: 85%" data-progress="85%"></span>
+                        <span style="width: 0%" data-progress="85%"></span>
                     </div>
                 </div>
                 <div class="box">
                     <h4>Php</h4>
                     <div class="prog">
-                        <span style="width: 95%" data-progress="95%"></span>
+                        <span style="width: 0%" data-progress="95%"></span>
                     </div>
                 </div>
             </div>
@@ -315,6 +409,13 @@
         </div>
     </div>
     <div class="Pricing" id="Pricing">
+        <div class="overlay none"></div>
+        <div class="sure none" >
+            <h2 > Are you sure abuot buying </h2>
+            <div class="sbut">
+                <button class="sureb">sure</button><button class="notsure">not sure</button>
+            </div>
+        </div>
         <div class="container">
             <div class="mein-head">
                 <h2>Pricing</h2>
@@ -438,6 +539,7 @@
             <p class="copyright">&copy; designed by <span>Kasper</span> and made by <span>Mohamed Halima</span></p>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

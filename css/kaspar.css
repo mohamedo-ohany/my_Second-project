@@ -220,11 +220,23 @@ ul {
 
 .home {
     position: relative;
-    background-color: darkgray;
-    background-image: url(../images/landing-2.jpg);
+    /* background-color: darkgray; */
+    /* background-image: url(../images/landing-2.jpg); */
     min-height: 100vh;
     background-size: cover;
     margin: 0%;
+}
+.home .img img{
+    display: none;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+                    opacity: 0;
+}
+.home .img .active{
+    display: block;
+    position: absolute;
+            opacity: 1;
 }
 
 .home .overlay {
@@ -234,6 +246,7 @@ ul {
     left: 0;
     right: 0;
     background-color: rgb(0 0 0 / 50%);
+    
 }
 
 .home .info {
@@ -242,7 +255,7 @@ ul {
     transform: translateY(-50%);
     text-align: center;
     max-width: 800px;
-    background: var(--main-color);
+    background: var(--transparent-color);
     padding: 15px;
     border-radius: 2%;
     left: -5px;
@@ -273,11 +286,15 @@ ul {
     transform: translateY(-50%);
     color: #ddd
 }
-
+.home .pro{
+cursor: pointer; 
+}
 .pro .fa-angle-left {
     left: 20px;
 }
-
+.skills .testimonials .bullets{
+cursor: pointer; 
+}
 .pro .fa-angle-right {
     right: 20px;
 }
@@ -302,12 +319,15 @@ ul {
 
 }
 
-.home .pro i:hover i {
+.home .pro i:hover {
     color: var(--main-color);
 }
 
+.skills .bullets i:hover{
+    color: var(--main-color);
+}
 @media (max-width: 767px) {
-    .pro {
+    .pro>i {
         display: none;
     }
 }
@@ -436,7 +456,14 @@ ul {
     justify-content: space-around;
 }
 
-.Portfolio .container .shuffle li:first-of-type {
+.shuffle{
+        margin-bottom: 60px;
+        cursor: pointer;
+}
+.shuffle li:hover {
+background-color: var(--main-color);
+}
+.Portfolio .container .shuffle .active {
     background-color: var(--main-color);
     color: white;
 }
@@ -448,9 +475,16 @@ ul {
 .Portfolio .imgs-con {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 60px;
+    transition: var(--main-transition);
 }
 
+
+.Portfolio .none{
+    transition: var(--main-transition);
+position: absolute;
+opacity: 0;
+top: 0;
+} 
 @media(min-width: 768px) {
     .Portfolio .imgs-con .box {
         flex-basis: 50%;
@@ -462,7 +496,11 @@ ul {
         flex-basis: 25%;
     }
 }
-
+.Portfolio .imgs-con .none {
+    transition: var(--main-transition);
+    opacity: 0;
+    display: none;
+}
 .Portfolio .imgs-con .box img {
     max-width: 100%;
     transition: var(--main-transition);
@@ -508,6 +546,7 @@ ul {
     margin: 30px auto;
     border: 0;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .video {
@@ -681,7 +720,9 @@ ul {
     align-items: center;
     padding: 10px 0;
 }
-
+.skills .testimonials .none{
+    display: none;
+}
 .skills .testimonials .box p {
     text-align: end;
     color: var(--poring-color);
@@ -747,6 +788,7 @@ ul {
     height: 100%;
     display: block;
     position: relative;
+    transition: var(--main-transition);
 }
 
 .skills .oskills .box .prog span::before {
@@ -848,7 +890,78 @@ ul {
         flex-basis: 24%;
     }
 }
+.sure{
+    padding: 15px;
+    border-radius: 15px;
+    background-color:#dedadc;
+    max-width: 50%;
+    min-width: 35%;
+    margin: auto;
+    padding-top: 30px;
+    text-align: center;
+    position: fixed;
+    bottom: 50%;
+    right: 32%;
+    transition: var(--main-transition);
+    z-index: 5;
+        /* opacity: 0; */
 
+}
+.Pricing .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* left: 0; */
+    right: 0;
+    background-color: rgb(0 0 0 / 50%);
+    z-index: 3;
+    transition: var(--main-transition);
+    /* opacity: 0; */
+    /* display: none; */
+}
+.none{
+    display: none;
+}
+.sure .sbut {
+    margin-top: 50px;
+        display: flex;
+    justify-content: space-around;
+
+}
+
+
+@media screen and (max-width: 991px) {
+    .sure {
+        width: 60%;
+        right: 10%;
+        left: 10%;
+                max-width: 70%;
+    }
+    
+}
+@media screen and (max-width: 767px) {
+    .sure {
+        width: 80%;
+        right: 10%;
+        left: 10%;
+        max-width: 90%;
+    }
+    
+}
+
+.sure .sbut  button{
+cursor: pointer;
+background-color: #dedadc;
+border-radius: 15px;
+border: 1px solid #000000;
+width: 80px;
+z-index: 10;
+}
+.sure .sbut  button:hover{
+    border-color: var(--main-color);
+    /* color: white; */
+}
 .Pricing .plans .box h3 {
     text-transform: uppercase;
     font-weight: normal;
@@ -898,8 +1011,12 @@ ul {
     padding: 10px 20px;
     border: 1px solid var(--main-color);
     margin: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
 }
-
+.Pricing .plans .box .Buy:hover{
+    background-color: var(--main-color);
+}
 .Pricing .container .cont-text {
     text-align: center;
     margin: 50px 0 15px;
